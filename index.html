@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Tasbeeh</title>
+    
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.tasbeeh-container {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #00796b;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #08f714;
+}
+
+p {
+  font-size: 50px;
+  color: #d31313;
+  margin: 0;
+}
+
+    </style>
+</head>
+        <div class="tasbeeh-container">
+            <h1>Digital Tasbeeh</h1>
+
+            <p id="countDisplay">0</p>
+
+            <button id="addBtn">Add</button>
+
+            <button id="subBtn">Sub</button>
+
+            <button id="resetBtn">Reset</button>
+          
+        </div>
+   
+    <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const addBtn = document.querySelector("#addBtn");
+
+  const subBtn = document.querySelector("#subBtn");
+
+  const resetBtn = document.querySelector("#resetBtn");
+
+  const countDisplay = document.querySelector("#countDisplay");
+
+  let count = 0;
+
+  addBtn.addEventListener("click", function () {
+    // Increment the count
+    count++;
+
+    // Update the display
+    countDisplay.innerText = count;
+  });
+
+  //==========================================================
+  subBtn.addEventListener("click", function () {
+    // Decrement the count
+    count--;
+
+    // Update the display
+    countDisplay.innerText = count;
+  });
+  //==========================================================
+
+  resetBtn.addEventListener("click", function () {
+    // reset the count
+    count = 0;
+
+    // Update the display
+    countDisplay.innerText = count;
+  });
+});
+
+    </script>
+</body>
+</html>
